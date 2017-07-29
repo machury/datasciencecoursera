@@ -2,7 +2,7 @@
 The first variable is the Id of one of the 6 activities.
 The second variable is the name of the activity [Walking, Walking_Upstairs, Walkin_Downstairs, Sitting, Standing, Laying].
 The third variable is the subject Id, 1 to 30.
-The fourth to 68th variable is the activity that is either a mean() or std() feature.
+The fourth to 68th variable is the feature that is either a mean() or std().
 
  [1] "Activity.Id"                     "Activity.Name"                   "Subject.Id"                     
  [4] "1_tBodyAcc-mean()-X"             "2_tBodyAcc-mean()-Y"             "3_tBodyAcc-mean()-Z"            
@@ -29,7 +29,7 @@ The fourth to 68th variable is the activity that is either a mean() or std() fea
 [67] "517_fBodyBodyAccJerkMag-std()"   "530_fBodyBodyGyroMag-std()"      "543_fBodyBodyGyroJerkMag-std()" 
 
 ## The data:
-The data is the average of each variable for each activity and each subject.
+The data is the average of each feature for each activity and each subject.
 
 ## Any transformations or work that you performed to clean up the data:
 - First we install and load the necessay packages
@@ -40,4 +40,4 @@ The data is the average of each variable for each activity and each subject.
 - We add column names to the data set.
 - We join the data set with the Activity table to get the activity names.
 - We then filter the data set to only include those features that are std() or mean()
-- We group by the Activity and Subject and calculate the average of each varible.
+- We group by the Activity and Subject and calculate the average of each variable.
