@@ -1,5 +1,3 @@
-## This is a markdown file
-
 ## Describes the variables:
 The first variable is the Id of one of the 6 activities.
 The second variable is the name of the activity [Walking, Walking_Upstairs, Walkin_Downstairs, Sitting, Standing, Laying].
