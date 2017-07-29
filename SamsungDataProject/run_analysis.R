@@ -28,20 +28,20 @@ train_y_tbl <- read.table("UCI HAR Dataset\\train\\Y_train.txt", header = FALSE,
 subject_test_tbl <- read.table("UCI HAR Dataset\\test\\Subject_test.txt", header = FALSE, sep = "")
 subject_train_tbl <- read.table("UCI HAR Dataset\\train\\Subject_train.txt", header = FALSE, sep = "")
 
-# Add Actitivy column
+# Add Actitivy, and subject column
 test_x_y_tbl <- cbind(test_x_tbl, test_y_tbl, subject_test_tbl)
 train_x_y_tbl <- cbind(train_x_tbl, train_y_tbl, subject_train_tbl)
 
 #Merge the training and the test sets to create one data set.
 test_and_train_tbl <- rbind(test_x_y_tbl, train_x_y_tbl)
 
-#Add Column Names
+#Add meaningful Column Names
 names(test_and_train_tbl) <- c(features$Feature.Name, "Activity.Id", "Subject.Id")
 
 #Uses descriptive activity names to name the activities in the data set
 test_and_train_x_y_labeled_tbl <- merge(test_and_train_tbl, activty_Labels, by.x = "Activity.Id", by.y = "Activity.Id")
 
-#Filters rows
+#Filters columns to mean, std, and required columns
 test_and_train_x_y_labeled_subset_tbl <- select(test_and_train_x_y_labeled_tbl, contains("-mean()"), contains("-std()"), starts_with("Activity."), starts_with("Subject."))
 
 #independent tidy data set with the average of each variable for each activity and each subject
