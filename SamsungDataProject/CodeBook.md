@@ -1,6 +1,6 @@
 ## This is a markdown file
 
-#Describes the variables:
+## Describes the variables:
 The first variable is the Id of one of the 6 activities.
 The second variable is the name of the activity [Walking, Walking_Upstairs, Walkin_Downstairs, Sitting, Standing, Laying].
 The third variable is the subject Id, 1 to 30.
@@ -30,10 +30,10 @@ The fourth to 68th variable is the activity that is either a mean() or std() fea
 [64] "428_fBodyGyro-std()-Y"           "429_fBodyGyro-std()-Z"           "504_fBodyAccMag-std()"          
 [67] "517_fBodyBodyAccJerkMag-std()"   "530_fBodyBodyGyroMag-std()"      "543_fBodyBodyGyroJerkMag-std()" 
 
-#The data:
+## The data:
 The data is the average of each variable for each activity and each subject.
 
-#Any transformations or work that you performed to clean up the data:
+## Any transformations or work that you performed to clean up the data:
 - First we install and load the necessay packages
 - We load the activity labels and feature names
 - In features we rename the feature names by appending the id_ to the feature to avoid dublicate column names
